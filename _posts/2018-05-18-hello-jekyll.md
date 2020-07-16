@@ -12,7 +12,7 @@ tags: jekyll
 
 # Welcome
 
-<span id="div1"></span>
+<span id="farmtime"></span>
 <script>
     function time() {
         var date = new Date();
@@ -29,10 +29,10 @@ tags: jekyll
                 var season = "秋";break;
         }
         var str = "农场时间: " + season + Math.floor(utime % aseason / 60000) + "/17";
-        var div1 = document.getElementById("div1");
+        var div1 = document.getElementById("farmtime");
         div1.innerHTML = str;
     }
-    setInterval(time,1000);
+    setInterval(time,5000);
 </script>
 
 ## Welcome
