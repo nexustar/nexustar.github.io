@@ -12,14 +12,23 @@ tags: jekyll
 
 # Welcome
 
-<div id="div1"></div>
+<span id="div1"></span>
 <script>
     function time() {
         var date = new Date();
-        var hour = date.getHours();
-        var minutes = date.getMinutes();
-        var seconds = date.getSeconds();
-        var str = "现在的时间" + hour + "时" + minutes + "分" + seconds + "秒";
+        var utime = date.getTime() - 1594790640000;
+        var aseason = 17 * 60 * 1000;
+        switch (Math.floor(utime/aseason)%4){
+            case 0:
+                var season = "冬";break;
+            case 1:
+                var season = "春";break;
+            case 2:
+                var season = "夏";break;
+            case 3:
+                var season = "秋";break;
+        }
+        var str = "农场时间: " + season + Math.floor(utime % aseason / 60000) + "/17";
         var div1 = document.getElementById("div1");
         div1.innerHTML = str;
     }
