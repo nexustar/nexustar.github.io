@@ -12,6 +12,20 @@ tags: jekyll
 
 # Welcome
 
+<div id="div1"></div>
+<script>
+    function time() {
+        var date = new Date();
+        var hour = date.getHours();
+        var minutes = date.getMinutes();
+        var seconds = date.getSeconds();
+        var str = "现在的时间" + hour + "时" + minutes + "分" + seconds + "秒";
+        var div1 = document.getElementById("div1");
+        div1.innerHTML = str;
+    }
+    setInterval(time,1000);
+</script>
+
 ## Welcome
 
 ### Welcome
